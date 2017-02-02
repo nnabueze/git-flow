@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Learn &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<title>Registration Portal</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -113,7 +113,7 @@
 	</nav>
 
 @yield('content')
-@yield('footer')
+
 
 
 	</div>
@@ -124,6 +124,7 @@
 	
 	<!-- jQuery -->
 	<script src="{{ asset('front_template/js/jquery.min.js')}}"></script>
+	@stack('scripts')
 	<!-- jQuery Easing -->
 	<script src="{{ asset('front_template/js/jquery.easing.1.3.js')}}"></script>
 	<!-- Bootstrap -->

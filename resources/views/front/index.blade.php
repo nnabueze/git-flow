@@ -10,7 +10,7 @@
 					<div class="display-tc animate-box" data-animate-effect="fadeIn">
 						<h1>The Art of Teaching is the Art of Assisting Discovery</h1>
 						<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-						<p><a class="btn btn-primary btn-lg btn-learn" href="/register/create"><i class="icon-play"></i>Register</a> <a class="btn btn-primary btn-lg popup-vimeo btn-video" href="https://vimeo.com/channels/staffpicks/93951774"><i class="icon-play"></i> Already Registered</a></p>
+						<p><a class="btn btn-primary btn-lg btn-learn" href="/register/create"><i class="icon-play"></i>Register</a> <a class="btn btn-primary btn-lg btn-video" href="/register/client"><i class="icon-play"></i> Already Registered</a></p>
 					</div>
 				</div>
 			</div>

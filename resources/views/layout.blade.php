@@ -90,7 +90,7 @@
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
 							<li class="active"><a href="/register">Home</a></li>
-							<li><a href="#">Courses</a></li>
+							
 							<li><a href="">About Us</a></li>
 							<li class="has-dropdown">
 								<a href="#">Blog</a>

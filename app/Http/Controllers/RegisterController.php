@@ -96,4 +96,10 @@ class RegisterController extends Controller
     {
         //
     }
+
+    //getting the registered client
+    public function client()
+    {
+        return view("front.client");
+    }
 }

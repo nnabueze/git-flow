@@ -15,5 +15,6 @@ Route::get('/', function () {
     return view('front.index');
 });
 
+Route::get("/register/client","RegisterController@client");
 //reoute for registeration
 Route::resource("/register","RegisterController");

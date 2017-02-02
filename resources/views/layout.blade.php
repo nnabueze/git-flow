@@ -102,8 +102,8 @@
 								</ul>
 							</li>
 							<li><a href="contact.html">Contact</a></li>
-							<li class="btn-cta"><a href="#"><span>Register</span></a></li>
-							<li class="btn-cta"><a href="#"><span>Already Registered</span></a></li>
+							<li class="btn-cta"><a href="/register"><span>Register</span></a></li>
+							<li class="btn-cta"><a href="/register/client"><span>Already Registered</span></a></li>
 						</ul>
 					</div>
 				</div>

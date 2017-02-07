@@ -20,6 +20,8 @@ Route::get("/register/client","RegisterController@client");
 Route::get("/admin/dashboard","AdminController@dashboard");
 Route::get("/admin/pending_registration","AdminController@pending_registration");
 
+//testing route
+
 //reoute for registeration via front end
 Route::resource("/register","RegisterController");
 

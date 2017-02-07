@@ -22,3 +22,7 @@ Route::get("/admin/pending_registration","AdminController@pending_registration")
 
 //reoute for registeration via front end
 Route::resource("/register","RegisterController");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

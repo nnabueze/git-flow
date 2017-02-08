@@ -26,6 +26,8 @@ Route::post("/permission/store","AdminController@permission_store");
 Route::get("/admin/dashboard","AdminController@dashboard");
 Route::get("/admin/pending_registration","AdminController@pending_registration");
 
+//testing route
+
 //reoute for registeration via front end
 
 Auth::routes();

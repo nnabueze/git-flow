@@ -3,7 +3,7 @@
 
 <section class="content-header">
 	<h1>
-		Pending Registration
+		User Page
 		<small>Control panel</small>
 	</h1>
 	<ol class="breadcrumb">
@@ -16,6 +16,8 @@
 <section class="content">
 	<div class="row">
 		<div class="col-xs-8">
+		@include("include.message")
+		@include("include.error")
 			<div class="box">
 				<div class="box-header">
 					<h3 class="box-title">Create User</h3>
@@ -34,24 +36,29 @@
 				<div class="box-body table-responsive">
 					<table class="table table-hover">
 						<tr>
+							<th>S/N</th>
 							<th>Name</th>
-							<th>Surname</th>
 							<th>Phone</th>
-							<th>Address</th>
-							<th>Gender</th>
-							<th>Status</th>
+							<th>Email</th>
+							<th>Role</th>
+							<th>Action</th>
 						</tr>
+						<?php $i = 1;?>
+					@if($users)
+						@foreach($users as $user)
 
 						<tr>
-							<td>hfjhfjf</td>
-							<td>hdfjfdjfjf</td>
-							<td>hfjfjf</td>
-							<td>hfjfjf</td>
-							<td>fjfjf</td>
-
-							<td><span class="label label-warning">Pending</span></td>
+							<td>{{$i}}</td>
+							<td>{{$user->name}}</td>
+							<td>{{$user->name}}</td>
+							<td>{{$user->name}}</td>
+							<td>{{$user->name}}</td>
+							<td>{{$user->name}}</td>
 
 						</tr>
+						<?php $i++;?>
+						@endforeach
+					@endif
 					</table>
 				</div>
 				<!-- /.box-body -->
@@ -76,6 +83,20 @@
 			                    @if ($errors->has('name'))
 			                        <span class="help-block">
 			                            <strong>{{ $errors->first('name') }}</strong>
+			                        </span>
+			                    @endif
+			                </div>
+			            </div>
+
+			            <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+			                <label for="name" class="col-md-4 control-label">Phone</label>
+
+			                <div class="col-md-6">
+			                    <input id="name" type="text" class="form-control" name="phone" value="{{ old('phone') }}" required autofocus>
+
+			                    @if ($errors->has('phone'))
+			                        <span class="help-block">
+			                            <strong>{{ $errors->first('phone') }}</strong>
 			                        </span>
 			                    @endif
 			                </div>

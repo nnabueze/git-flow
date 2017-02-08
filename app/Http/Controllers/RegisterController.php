@@ -40,8 +40,7 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        print_r($request->all());
-        die;
+
         $request['key_id'] = str_random(15);
 
         if ($register = Register::create($request->all())) {

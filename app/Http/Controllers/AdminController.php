@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Register;
 use Redirect;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -32,6 +33,7 @@ class AdminController extends Controller
     //displaying admin page to create user
     public function create()
     {
-        return view("user.create");
+        $users = User::all();
+        return view("user.create",compact("users"));
     }
 }

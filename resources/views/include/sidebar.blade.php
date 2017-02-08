@@ -82,8 +82,18 @@
           <i class="fa fa-envelope"></i> <span>Notification</span>
         </a>
       </li>
+      <li>
+          <a href="{{ url('/logout') }}"
+              onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+            <i class="fa fa-book"></i> <span>
+              Logout
+          </a>
 
-      <li><a href="#"><i class="fa fa-book"></i> <span>Logout</span></a></li>
+          <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+          </form>
+      </li>
 
     </ul>
   </section>

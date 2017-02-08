@@ -39,10 +39,10 @@ class User extends Authenticatable
 
     }
 
-    public function can($permission)
+/*    public function can($permission)
     {
 
-    }
+    }*/
 
     public function ability($roles, $permissions, $options)
     {

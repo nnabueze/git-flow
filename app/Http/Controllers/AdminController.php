@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Register;
+use Redirect;
 
 class AdminController extends Controller
 {
@@ -20,5 +21,11 @@ class AdminController extends Controller
     {
     	$register = Register::where("status","0")->get();
     	return view("admin.registration.pending",compact("register"));
+    }
+
+    //displaying login page
+    public function admin()
+    {
+        return Redirect::to("/login");
     }
 }

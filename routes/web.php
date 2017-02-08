@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 //admin routes
 Route::get("/register/client","RegisterController@client");
+Route::get("/admin","AdminController@admin");
 Route::get("/admin/dashboard","AdminController@dashboard");
 Route::get("/admin/pending_registration","AdminController@pending_registration");
 

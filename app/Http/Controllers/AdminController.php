@@ -28,4 +28,10 @@ class AdminController extends Controller
     {
         return Redirect::to("/login");
     }
+
+    //displaying admin page to create user
+    public function create()
+    {
+        return view("user.create");
+    }
 }

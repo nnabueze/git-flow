@@ -38,7 +38,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> User</a></li>
+          <li><a href="{{ url('/user/create') }}"><i class="fa fa-circle-o"></i> User</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i> Role</a></li>
         </ul>
       </li>

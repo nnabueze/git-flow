@@ -8,6 +8,7 @@ use App\Register;
 use Redirect;
 use App\User;
 use App\Role;
+use App\Permission;
 
 use Session;
 
@@ -52,14 +53,35 @@ class AdminController extends Controller
     {
         $this->validator($request->all())->validate();
         if ($role = Role::create($request->all())) {
-            Session::flash('message','Successful! Account Created');
+            Session::flash('message','Successful! Role Created');
 
             return Redirect::back();
         }
 
-        Session::flash('warning','Failed! Account Not Created');
+        Session::flash('warning','Failed! Role Not Created');
         return Redirect::back();
 
+    }
+
+    //displaying permission
+    public function permission()
+    {
+        $permissions = Permission::all();
+        return view("permission.create",compact("permissions"));
+    }
+
+    //storing permission
+    public function permission_store(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        if ($permission = Permission::create($request->all())) {
+            Session::flash('message','Successful! Permission Created');
+
+            return Redirect::back();
+        }
+
+        Session::flash('warning','Failed! Permission Not Created');
+        return Redirect::back();
     }
 
     /**

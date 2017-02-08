@@ -40,7 +40,7 @@
         <ul class="treeview-menu">
           <li><a href="{{ url('/user/create') }}"><i class="fa fa-circle-o"></i> User</a></li>
           <li><a href="/role/create"><i class="fa fa-circle-o"></i> Role</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Permission</a></li>
+          <li><a href="/permission/create"><i class="fa fa-circle-o"></i> Permission</a></li>
         </ul>
       </li>
       <li class="treeview ">

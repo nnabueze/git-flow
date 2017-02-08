@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use App\Register;
 use Redirect;
 use App\User;
+use App\Role;
+
+use Session;
 
 class AdminController extends Controller
 {
@@ -30,10 +34,45 @@ class AdminController extends Controller
         return Redirect::to("/login");
     }
 
+    //display the role page
+    public function role()
+    {
+        return view("role.create");
+    }
+
     //displaying admin page to create user
     public function create()
     {
         $users = User::all();
         return view("user.create",compact("users"));
+    }
+
+    //storing role
+    public function store(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        if ($role = Role::create($request->all())) {
+            Session::flash('message','Successful! Account Created');
+
+            return Redirect::back();
+        }
+
+        Session::flash('warning','Failed! Account Not Created');
+        return Redirect::back();
+
+    }
+
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => 'required|max:255',
+            'display_name' => 'required',
+        ]);
     }
 }

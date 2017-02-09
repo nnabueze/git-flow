@@ -35,5 +35,3 @@ Route::get("/admin/pending_registration","AdminController@pending_registration")
 
 Auth::routes();
 //Route::resource("/register","RegisterController");
-
-Route::get('/home', 'HomeController@index');

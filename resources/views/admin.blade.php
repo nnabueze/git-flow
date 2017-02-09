@@ -8,6 +8,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="{{ asset('admin_template/bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('admin_template/plugins/datatables/dataTables.bootstrap.css')}}">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -83,6 +84,8 @@
 
 <!-- jQuery 2.2.3 -->
 <script src="{{ asset('admin_template/plugins/jQuery/jquery-2.2.3.min.js')}}"></script>
+<script src="{{ asset('admin_template/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{ asset('admin_template/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -91,6 +94,7 @@
 </script>
 <!-- Bootstrap 3.3.6 -->
 <script src="{{ asset('admin_template/bootstrap/js/bootstrap.min.js')}}"></script>
+
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="{{ asset('admin_template/plugins/morris/morris.min.js')}}"></script>

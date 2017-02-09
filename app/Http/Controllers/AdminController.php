@@ -16,6 +16,10 @@ use Session;
 class AdminController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     //methode showing the dashboard
     public function dashboard()

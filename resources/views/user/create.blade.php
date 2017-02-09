@@ -50,10 +50,10 @@
 						<tr>
 							<td>{{$i}}</td>
 							<td>{{$user->name}}</td>
+							<td>{{$user->phone}}</td>
+							<td>{{$user->email}}</td>
 							<td>{{$user->name}}</td>
-							<td>{{$user->name}}</td>
-							<td>{{$user->name}}</td>
-							<td>{{$user->name}}</td>
+							<td><a href="" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete"><span class="glyphicon glyphicon-trash"></span></a></td>
 
 						</tr>
 						<?php $i++;?>
@@ -173,4 +173,10 @@
 @stop
 
 @push('scripts')
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+@endpush
 

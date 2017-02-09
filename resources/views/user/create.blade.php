@@ -138,10 +138,26 @@
 			                </div>
 			            </div>
 
+			            <div class="form-group{{ $errors->has('display_name') ? ' has-error' : '' }}">
+			                <label for="name" class="col-md-4 control-label">Select Role</label>
+
+			                <div class="col-md-6">
+			                    <select class="form-control" name="role[]">
+			                    @if($roles)
+			                    	@foreach($roles as $role)
+			                      <option value="{{$role->id}}">{{$role->name}}</option>
+			                      	@endforeach
+			                      	@else
+			                      	<option value="">No role</option>
+			                    @endif
+			                    </select>
+			                </div>
+			            </div>
+
 			            <div class="form-group">
 			                <div class="col-md-6 col-md-offset-4">
 			                    <button type="submit" class="btn btn-primary">
-			                        Register
+			                        Create User
 			                    </button>
 			                </div>
 			            </div>

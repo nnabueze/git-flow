@@ -108,12 +108,6 @@
 			                      	<option value="">No Permission</option>
 			                    @endif
 			                    </select>
-
-			                    @if ($errors->has('display_name'))
-			                        <span class="help-block">
-			                            <strong>{{ $errors->first('display_name') }}</strong>
-			                        </span>
-			                    @endif
 			                </div>
 			            </div>
 

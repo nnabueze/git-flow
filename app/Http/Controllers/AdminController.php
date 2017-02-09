@@ -46,14 +46,15 @@ class AdminController extends Controller
     public function create()
     {
         $users = User::all();
-        return view("user.create");
+        $roles = Role::all();
+        return view("user.create",compact("users","roles"));
     }
 
     //storing role
     public function store(Request $request)
     {
         $this->validator($request->all())->validate();
-        
+
         if ($role = Role::create($request->all())) {
             $role->attachPermissions($request->input("permission"));
             Session::flash('message','Successful! Role Created');

@@ -88,6 +88,22 @@ class AdminController extends Controller
         return Redirect::back();
     }
 
+    //deleting permission
+    public function permission_delete($id)
+    {
+        
+        if ($permission = Permission::find($id)) {
+           $permission->delete();
+
+           Session::flash('message','Successful! Permission Deleted');
+           return Redirect::back();
+        }
+
+        Session::flash('warning','Failed! Permission Not Deleted');
+        return Redirect::back();
+    }
+
+
     /**
      * Get a validator for an incoming registration request.
      *

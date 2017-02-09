@@ -21,6 +21,7 @@ Route::get("/admin","AdminController@admin");
 Route::get("/user/create","AdminController@create");
 Route::get("/role/create","AdminController@role");
 Route::get("/permission/create","AdminController@permission");
+Route::get("/permission/permission_delete/{any}","AdminController@permission_delete");
 Route::post("/role/store","AdminController@store");
 Route::post("/permission/store","AdminController@permission_store");
 Route::get("/admin/dashboard","AdminController@dashboard");

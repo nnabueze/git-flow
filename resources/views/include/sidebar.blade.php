@@ -28,7 +28,7 @@
       <li class="header">MAIN NAVIGATION</li>
     
           <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-
+      @if(Auth::user()->hasRole('Admin'))
       <li class="treeview">
         <a href="#">
           <i class="fa fa-pie-chart"></i>
@@ -43,6 +43,9 @@
           <li><a href="/permission/create"><i class="fa fa-circle-o"></i> Permission</a></li>
         </ul>
       </li>
+      @endif
+
+
       <li class="treeview ">
         <a href="#">
           <i class="fa fa-laptop"></i>

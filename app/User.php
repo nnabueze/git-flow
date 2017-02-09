@@ -30,28 +30,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-/*    public function roles()
+    //capitalizing the Name attribute
+    public function setNameAttribute($value)
     {
-
-    }*/
-
-    public function roles()
-    {
-        return $this->belongsToMany('App\Role');
-    }
-
-    public function hasRole($name)
-    {
-
-    }
-
-/*    public function can($permission)
-    {
-
-    }*/
-
-    public function ability($roles, $permissions, $options)
-    {
-        
+        $this->attributes['name'] = ucwords($value);
     }
 }

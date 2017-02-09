@@ -9,6 +9,7 @@ use Redirect;
 use App\User;
 use App\Role;
 use App\Permission;
+use Auth;
 
 use Session;
 
@@ -117,6 +118,31 @@ class AdminController extends Controller
 
        Session::flash('warning','Failed! role Not Deleted');
        return Redirect::back();
+    }
+
+    //deleting a specific user
+    public function user_delete($id)
+    {
+
+        if ($user = User::find($id)) {
+            if ($user->hasRole('Admin')) {
+
+               Session::flash('warning',"Failed! Can't delete an Admin");
+               return Redirect::back();
+               
+            }else{
+
+                $user->delete();
+
+                Session::flash('message','Successful! user Deleted');
+                return Redirect::back();
+
+            }
+         
+        }
+
+        Session::flash('warning','Failed! user Not Deleted');
+        return Redirect::back();
     }
 
 

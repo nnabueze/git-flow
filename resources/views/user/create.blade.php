@@ -17,7 +17,7 @@
 	<div class="row">
 		<div class="col-xs-8">
 		@include("include.message")
-		@include("include.error")
+		@include("include.warning")
 			<div class="box">
 				<div class="box-header">
 					<h3 class="box-title">Create User</h3>
@@ -40,7 +40,6 @@
 							<th>Name</th>
 							<th>Phone</th>
 							<th>Email</th>
-							<th>Role</th>
 							<th>Action</th>
 						</tr>
 						<?php $i = 1;?>
@@ -52,8 +51,7 @@
 							<td>{{$user->name}}</td>
 							<td>{{$user->phone}}</td>
 							<td>{{$user->email}}</td>
-							<td>{{$user->name}}</td>
-							<td><a href="" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete"><span class="glyphicon glyphicon-trash"></span></a></td>
+							<td><a href="" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/user/user_delete/{{$user->id}}" class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete"><span class="glyphicon glyphicon-trash"></span></a></td>
 
 						</tr>
 						<?php $i++;?>

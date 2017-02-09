@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::get("/register/client","RegisterController@client");
 Route::get("/admin","AdminController@admin");
 Route::get("/user/create","AdminController@create");
+Route::get("/user/user_delete/{any}","AdminController@user_delete");
 Route::get("/role/create","AdminController@role");
 Route::get("/role/role_delete/{any}","AdminController@role_delete");
 Route::get("/permission/create","AdminController@permission");

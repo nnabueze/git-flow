@@ -142,7 +142,7 @@
 			                <label for="name" class="col-md-4 control-label">Select Role</label>
 
 			                <div class="col-md-6">
-			                    <select class="form-control" name="role[]">
+			                    <select class="form-control" name="role">
 			                    @if($roles)
 			                    	@foreach($roles as $role)
 			                      <option value="{{$role->id}}">{{$role->name}}</option>

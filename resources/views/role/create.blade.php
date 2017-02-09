@@ -39,7 +39,7 @@
 							<th>S/N</th>
 							<th>Name</th>
 							<th>Display Name</th>
-							<th>Discription</th>
+							<th>Description</th>
 							<th>Action</th>
 						</tr>
 					<?php $i =1;?>
@@ -49,7 +49,7 @@
 							<td>{{$i}}</td>
 							<td>{{$role->name}}</td>
 							<td>{{$role->display_name}}</td>
-							<td>{{$role->discription}}</td>
+							<td>{{$role->description}}</td>
 							<td><a href="" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/role/role_delete/{{$role->id}}" class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete"><span class="glyphicon glyphicon-trash"></span></a></td>
 
 						</tr>
@@ -119,7 +119,7 @@
 			                <label for="description" class="col-md-4 control-label">Description</label>
 
 			                <div class="col-md-6">
-			                    <textarea class="form-control" rows="5" >{{ old('description') }}</textarea>
+			                    <textarea class="form-control" name="description" rows="5" >{{ old('description') }}</textarea>
 
 			                    @if ($errors->has('description'))
 			                        <span class="help-block">

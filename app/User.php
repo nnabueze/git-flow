@@ -8,8 +8,7 @@ use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
-    use Notifiable;
-    use EntrustUserTrait;
+    use Notifiable, EntrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -20,6 +19,8 @@ class User extends Authenticatable
         'name', 'email', 'password','phone'
     ];
 
+
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -29,9 +30,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function roles()
+/*    public function roles()
     {
 
+    }*/
+
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role');
     }
 
     public function hasRole($name)

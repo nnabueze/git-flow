@@ -95,6 +95,28 @@
 			                </div>
 			            </div>
 
+			            <div class="form-group{{ $errors->has('display_name') ? ' has-error' : '' }}">
+			                <label for="name" class="col-md-4 control-label">Select Permission</label>
+
+			                <div class="col-md-6">
+			                    <select class="form-control" name="permission[]">
+			                    @if($permissions)
+			                    	@foreach($permissions as $permission)
+			                      <option value="{{$permission->id}}">{{$permission->name}}</option>
+			                      	@endforeach
+			                      	@else
+			                      	<option value="">No Permission</option>
+			                    @endif
+			                    </select>
+
+			                    @if ($errors->has('display_name'))
+			                        <span class="help-block">
+			                            <strong>{{ $errors->first('display_name') }}</strong>
+			                        </span>
+			                    @endif
+			                </div>
+			            </div>
+
 			            <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
 			                <label for="description" class="col-md-4 control-label">Description</label>
 

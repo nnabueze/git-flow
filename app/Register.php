@@ -19,4 +19,22 @@ class Register extends Model
          'company_phone',
          'office_email',
     ];
+
+    //capitalizing the Name attribute
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = ucwords($value);
+    }
+
+    //capitalizing the surname attribute
+    public function setSurnameAttribute($value)
+    {
+        $this->attributes['surname'] = ucwords($value);
+    }
+
+    //capitalizing the Name attribute
+    public function setCompanyNameAttribute($value)
+    {
+        $this->attributes['name_company'] = ucwords($value);
+    }
 }

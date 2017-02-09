@@ -42,16 +42,20 @@
 							<th>Discription</th>
 							<th>Action</th>
 						</tr>
-					
-
+					<?php $i =1;?>
+					@if($roles)
+						@foreach($roles as $role)
 						<tr>
-							<td></td>
-							<td>hdhksjdhjk</td>
-							<td>hdhksjdhjk</td>
-							<td>hdhksjdhjk</td>
-							<td><a href="" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete"><span class="glyphicon glyphicon-trash"></span></a></td>
+							<td>{{$i}}</td>
+							<td>{{$role->name}}</td>
+							<td>{{$role->display_name}}</td>
+							<td>{{$role->discription}}</td>
+							<td><a href="" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/role/role_delete/{{$role->id}}" class="btn btn-default btn-sm" data-toggle="tooltip" title="Delete"><span class="glyphicon glyphicon-trash"></span></a></td>
 
 						</tr>
+						<?php $i++;?>
+						@endforeach
+					@endif
 					</table>
 				</div>
 				<!-- /.box-body -->
@@ -99,7 +103,7 @@
 			                <label for="name" class="col-md-4 control-label">Select Permission</label>
 
 			                <div class="col-md-6">
-			                    <select class="form-control" name="permission[]">
+			                    <select class="form-control" name="permission[]" data-live-search="true" multiple>
 			                    @if($permissions)
 			                    	@foreach($permissions as $permission)
 			                      <option value="{{$permission->id}}">{{$permission->name}}</option>

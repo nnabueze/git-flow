@@ -20,6 +20,7 @@ Route::get("/register/client","RegisterController@client");
 Route::get("/admin","AdminController@admin");
 Route::get("/user/create","AdminController@create");
 Route::get("/role/create","AdminController@role");
+Route::get("/role/role_delete/{any}","AdminController@role_delete");
 Route::get("/permission/create","AdminController@permission");
 Route::get("/permission/permission_delete/{any}","AdminController@permission_delete");
 Route::post("/role/store","AdminController@store");

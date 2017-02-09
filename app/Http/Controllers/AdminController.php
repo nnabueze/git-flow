@@ -39,7 +39,8 @@ class AdminController extends Controller
     public function role()
     {
         $permissions = Permission::all();
-        return view("role.create",compact("permissions"));
+        $roles = Role::all();
+        return view("role.create",compact("permissions","roles"));
     }
 
     //displaying admin page to create user
@@ -101,6 +102,21 @@ class AdminController extends Controller
 
         Session::flash('warning','Failed! Permission Not Deleted');
         return Redirect::back();
+    }
+
+    //deleting role
+    public function role_delete($id)
+    {
+       
+       if ($role = Role::find($id)) {
+          $role->delete();
+
+          Session::flash('message','Successful! role Deleted');
+          return Redirect::back();
+       }
+
+       Session::flash('warning','Failed! role Not Deleted');
+       return Redirect::back();
     }
 
 

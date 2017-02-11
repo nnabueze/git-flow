@@ -44,7 +44,7 @@ class RegisterController extends Controller
 
         $request['key_id'] = str_random(15);
 
-        if ($register = Client::create($request->all())) {
+        if ($register = Register::create($request->all())) {
             Session::flash('message','Successful! Account Created Payment reference code: '.$request['key_id']);
             return Redirect::back();
         }

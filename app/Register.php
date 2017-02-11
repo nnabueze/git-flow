@@ -17,7 +17,7 @@ class Register extends Model
          'name_company',
          'position',
          'company_phone',
-         'office_email',
+         'email',
     ];
 
     //capitalizing the Name attribute

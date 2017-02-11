@@ -19,12 +19,12 @@ class CreateRegisterTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('phone');
-            $table->string('address');
-            $table->string('gender');
-            $table->string('name_company');
-            $table->string('position');
-            $table->string('company_phone');
-            $table->string('office_email');
+            $table->string('address')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('name_company')->nullable();
+            $table->string('position')->nullable();
+            $table->string('company_phone')->nullable();
+            $table->string('email')->nullable();
             $table->enum('status', ['0', '1']);
             $table->timestamps();
         });

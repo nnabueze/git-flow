@@ -25,13 +25,24 @@ class AdminController extends Controller
     //methode showing the dashboard
     public function dashboard()
     {
-    	return view("admin.dashboard.index");
+        //pending registration
+        $clients = Register::where("status","0")->get();
+
+        //complete registration
+        $complete = Register::where("status","1")->get();
+
+        $pending_count = $clients->count();
+        $complete_count = $complete->count();
+
+        //last five
+        $register = Register::limit(5)->get();
+    	return view("admin.dashboard.index",compact("register","pending_count","complete_count"));
     }
 
     //getting list of pending registration
     public function pending_registration()
     {
-    	$clients = Client::where("status","0")->get();
+    	$clients = Register::where("status","0")->get();
     	return view("admin.registration.pending",compact("clients"));
     }
 

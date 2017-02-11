@@ -27,7 +27,7 @@
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
     
-          <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+          <li class="active"><a href="/admin/dashboard"><i class="fa fa-circle-o"></i> Dashboard</a></li>
       @if(Auth::user()->hasRole('Admin'))
       <li class="treeview">
         <a href="#">

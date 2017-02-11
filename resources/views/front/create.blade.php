@@ -111,7 +111,7 @@
 		@if(Session::has('message'))
 			@include("include.message")
 		@else
-		<form role="form" class="" method="POST" action="/register">
+		<form role="form" class="" method="POST" action="/register/store">
 			{!! csrf_field() !!} 
 		    <div class="row setup-content" id="ProfileSetup-step">
 		        <div class="col-xs-12">

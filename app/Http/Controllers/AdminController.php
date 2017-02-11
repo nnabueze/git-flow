@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Register;
+use App\Client;
 use Redirect;
 use App\User;
 use App\Role;
@@ -30,8 +31,8 @@ class AdminController extends Controller
     //getting list of pending registration
     public function pending_registration()
     {
-    	$register = Register::where("status","0")->get();
-    	return view("admin.registration.pending",compact("register"));
+    	$clients = Client::where("status","0")->get();
+    	return view("admin.registration.pending",compact("clients"));
     }
 
     //displaying login page

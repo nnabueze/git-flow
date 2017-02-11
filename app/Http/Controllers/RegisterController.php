@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Register;
+use App\Client;
 use Session;
 use Redirect;
 
@@ -43,7 +44,7 @@ class RegisterController extends Controller
 
         $request['key_id'] = str_random(15);
 
-        if ($register = Register::create($request->all())) {
+        if ($register = Client::create($request->all())) {
             Session::flash('message','Successful! Account Created Payment reference code: '.$request['key_id']);
             return Redirect::back();
         }
@@ -101,5 +102,11 @@ class RegisterController extends Controller
     public function client()
     {
         return view("front.client");
+    }
+
+    //registering user without payment
+    public function pending()
+    {
+        return view("front.pending");
     }
 }

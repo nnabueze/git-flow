@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 //admin routes
 Route::get("/register/client","RegisterController@client");
+Route::get("/register/pending","RegisterController@pending");
+Route::get("/register/create","RegisterController@create");
+Route::post("/register/store","RegisterController@store");
 Route::get("/admin","AdminController@admin");
 Route::get("/user/create","AdminController@create");
 Route::get("/user/user_delete/{any}","AdminController@user_delete");
@@ -27,6 +30,7 @@ Route::get("/permission/permission_delete/{any}","AdminController@permission_del
 Route::post("/role/store","AdminController@store");
 Route::post("/permission/store","AdminController@permission_store");
 Route::get("/admin/dashboard","AdminController@dashboard");
+Route::get("/home","AdminController@dashboard");
 Route::get("/admin/pending_registration","AdminController@pending_registration");
 
 //testing route

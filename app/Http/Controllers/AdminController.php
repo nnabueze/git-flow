@@ -161,6 +161,14 @@ class AdminController extends Controller
         return Redirect::back();
     }
 
+    //printing id card
+    public function print_id()
+    {
+            //complete registration
+            $complete = Register::where("status","1")->get();
+            return view("admin.print_id",compact("complete"));
+    }
+
 
     /**
      * Get a validator for an incoming registration request.

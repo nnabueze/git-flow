@@ -30,6 +30,7 @@ Route::get("/permission/permission_delete/{any}","AdminController@permission_del
 Route::post("/role/store","AdminController@store");
 Route::post("/permission/store","AdminController@permission_store");
 Route::get("/admin/dashboard","AdminController@dashboard");
+Route::get("/admin/print_id","AdminController@print_id");
 Route::get("/home","AdminController@dashboard");
 Route::get("/admin/pending_registration","AdminController@pending_registration");
 

@@ -3,12 +3,12 @@
 
 <section class="content-header">
  <h1>
-   Pending Registration
+   ID Card
    <small>Control panel</small>
  </h1>
  <ol class="breadcrumb">
    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-   <li class="active">Pending Registration</li>
+   <li class="active">ID Card</li>
  </ol>
 </section>
 
@@ -28,10 +28,11 @@
                 <th>Phone</th>
                 <th>Email</th>
                 <th>Status</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
-            @foreach($clients as $client)
+            @foreach($complete as $client)
               <tr>
                 <td>{{$client->name}}</td>
                 <td>{{$client->surname}}</td>
@@ -42,6 +43,7 @@
                 @else
                 <td><span class="label label-success">Completed</span></td>
                 @endif
+                <td><a href="" class="btn btn-default btn-sm" data-toggle="tooltip" title="Print Card"><span class="glyphicon glyphicon-print"></span></a></td>
               </tr>
             @endforeach
             </tbody>
@@ -52,6 +54,7 @@
                 <th>Phone</th>
                 <th>Email</th>
                 <th>Status</th>
+                <th>Action</th>
               </tr>
             </tfoot>
           </table>

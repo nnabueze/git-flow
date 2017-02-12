@@ -67,7 +67,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Print ID</a></li>
+          <li><a href="/admin/print_id"><i class="fa fa-circle-o"></i> Print ID</a></li>
         </ul>
       </li>
       <li class="treeview">

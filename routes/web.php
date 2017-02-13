@@ -22,6 +22,8 @@ Route::get("/register/create","RegisterController@create");
 Route::post("/register/store","RegisterController@store");
 Route::get("/admin","AdminController@admin");
 Route::get("/user/create","AdminController@create");
+Route::get("/user/edit","AdminController@edit");
+Route::post("/user/update_user","AdminController@update_user");
 Route::get("/user/user_delete/{any}","AdminController@user_delete");
 Route::get("/role/create","AdminController@role");
 Route::get("/role/role_delete/{any}","AdminController@role_delete");

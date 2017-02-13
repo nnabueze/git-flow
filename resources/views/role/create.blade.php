@@ -17,7 +17,7 @@
 	<div class="row">
 		<div class="col-xs-8">
 		@include("include.message")
-		@include("include.error")
+		@include("include.warning")
 			<div class="box">
 				<div class="box-header">
 					<h3 class="box-title">Role User</h3>

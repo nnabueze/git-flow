@@ -28,7 +28,7 @@
       <li class="header">MAIN NAVIGATION</li>
     
           <li class="active"><a href="/admin/dashboard"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-      @if(Auth::user()->hasRole('Admin'))
+      @if(Auth::user()->hasRole('Admin') || Auth::user()->hasRole('Superadmin'))
       <li class="treeview">
         <a href="#">
           <i class="fa fa-pie-chart"></i>
@@ -78,7 +78,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Edit Profile</a></li>
+          <li><a href="/user/edit"><i class="fa fa-circle-o"></i> Edit Profile</a></li>
         </ul>
       </li>
       <li>

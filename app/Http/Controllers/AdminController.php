@@ -11,6 +11,7 @@ use App\User;
 use App\Role;
 use App\Permission;
 use Auth;
+use Hash;
 
 use Session;
 
@@ -126,6 +127,10 @@ class AdminController extends Controller
     {
        
        if ($role = Role::find($id)) {
+        if ($role->name == "Admin" || $role->name == "Superadmin") {
+            Session::flash('warning','Failed! can delete a superadmin/admin');
+            return Redirect::back();
+        }
           $role->delete();
 
           Session::flash('message','Successful! role Deleted');
@@ -141,9 +146,9 @@ class AdminController extends Controller
     {
 
         if ($user = User::find($id)) {
-            if ($user->hasRole('Admin')) {
+            if ($user->hasRole('Admin') || $user->hasRole("Superadmin")) {
 
-               Session::flash('warning',"Failed! Can't delete an Admin");
+               Session::flash('warning',"Failed! Can't delete an Admin/Superadmin");
                return Redirect::back();
                
             }else{
@@ -167,6 +172,25 @@ class AdminController extends Controller
             //complete registration
             $complete = Register::where("status","1")->get();
             return view("admin.print_id",compact("complete"));
+    }
+
+    //Displaying admin user edit form
+    public function edit()
+    {
+        $user = User::find(Auth::user()->id);
+        return view("user.edit",compact("user"));
+    }
+
+    //store admin user update
+    public function update_user(Request $request)
+    {
+        $user = User::find(Auth::user()->id);
+        $request['password'] = Hash::make($request->input("password"));
+        $user->update($request->all());
+
+        Session::flash("message","Successful! Record updated");
+        return Redirect::back();
+
     }
 
 

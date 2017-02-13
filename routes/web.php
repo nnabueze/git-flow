@@ -17,12 +17,28 @@ Route::get('/', function () {
 
 //admin routes
 Route::get("/register/client","RegisterController@client");
+Route::get("/register/pending","RegisterController@pending");
+Route::get("/register/create","RegisterController@create");
+Route::post("/register/store","RegisterController@store");
+Route::get("/admin","AdminController@admin");
+Route::get("/user/create","AdminController@create");
+Route::get("/user/edit","AdminController@edit");
+Route::post("/user/update_user","AdminController@update_user");
+Route::get("/user/user_delete/{any}","AdminController@user_delete");
+Route::get("/role/create","AdminController@role");
+Route::get("/role/role_delete/{any}","AdminController@role_delete");
+Route::get("/permission/create","AdminController@permission");
+Route::get("/permission/permission_delete/{any}","AdminController@permission_delete");
+Route::post("/role/store","AdminController@store");
+Route::post("/permission/store","AdminController@permission_store");
 Route::get("/admin/dashboard","AdminController@dashboard");
+Route::get("/admin/print_id","AdminController@print_id");
+Route::get("/home","AdminController@dashboard");
 Route::get("/admin/pending_registration","AdminController@pending_registration");
 
+//testing route
+
 //reoute for registeration via front end
-Route::resource("/register","RegisterController");
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
+//Route::resource("/register","RegisterController");

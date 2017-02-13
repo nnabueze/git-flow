@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Register;
+use App\Client;
 use Session;
 use Redirect;
 
@@ -101,5 +102,11 @@ class RegisterController extends Controller
     public function client()
     {
         return view("front.client");
+    }
+
+    //registering user without payment
+    public function pending()
+    {
+        return view("front.pending");
     }
 }

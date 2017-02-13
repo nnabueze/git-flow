@@ -4,19 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Register extends Model
+class Client extends Model
 {
-    //
     protected $fillable = [
         'name',
          'surname', 
          'key_id', 
          'phone',
-         'address',
-         'gender',
-         'name_company',
-         'position',
-         'company_phone',
          'email',
     ];
 
@@ -30,11 +24,5 @@ class Register extends Model
     public function setSurnameAttribute($value)
     {
         $this->attributes['surname'] = ucwords($value);
-    }
-
-    //capitalizing the Name attribute
-    public function setCompanyNameAttribute($value)
-    {
-        $this->attributes['name_company'] = ucwords($value);
     }
 }

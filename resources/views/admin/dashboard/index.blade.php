@@ -20,7 +20,7 @@
        <!-- small box -->
        <div class="small-box bg-yellow">
          <div class="inner">
-           <h3>44</h3>
+           <h3>{{$complete_count}}</h3>
 
            <p>Completed Registrations</p>
          </div>
@@ -36,7 +36,7 @@
          <!-- small box -->
          <div class="small-box bg-aqua">
            <div class="inner">
-             <h3>150</h3>
+             <h3>{{$pending_count}}</h3>
 
              <p>Pending Registrations</p>
            </div>
@@ -73,76 +73,52 @@
 <div class="row">
   <div class="col-xs-8">
     <div class="box">
-      <div class="box-header">
-        <h3 class="box-title">Last Five Registration</h3>
-
-        <div class="box-tools">
-          <div class="input-group input-group-sm" style="width: 150px;">
-            <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-            <div class="input-group-btn">
-              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- /.box-header -->
-      <div class="box-body table-responsive">
-        <table class="table table-hover">
-          <tr>
-            <th>ID</th>
-            <th>User</th>
-            <th>Unique Idntification</th>
-            <th>Date</th>
-            <th>Status</th>
-            <th>Reason</th>
-          </tr>
-          <tr>
-            <td>183</td>
-            <td>John Doe</td>
-            <td>4784JD94NDFI</td>
-            <td>11-7-2014</td>
-            <td><span class="label label-success">Completed</span></td>
-            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-          </tr>
-          <tr>
-            <td>219</td>
-            <td>Alexander Pierce</td>
-            <td>4784JD94NDFI</td>
-            <td>11-7-2014</td>
-            <td><span class="label label-warning">Pending</span></td>
-            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-          </tr>
-          <tr>
-            <td>657</td>
-            <td>Bob Doe</td>
-            <td>4784JD94NDFI</td>
-            <td>11-7-2014</td>
-            <td><span class="label label-success">Completed</span></td>
-            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-          </tr>
-          <tr>
-            <td>175</td>
-            <td>Mike Doe</td>
-            <td>4784JD94NDFI</td>
-            <td>11-7-2014</td>
-            <td><span class="label label-warning">Pending</span></td>
-            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-          </tr>
-          <tr>
-            <td>175</td>
-            <td>Mike Doe</td>
-            <td>4784JD94NDFI</td>
-            <td>11-7-2014</td>
-            <td><span class="label label-warning">Pending</span></td>
-            <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-          </tr>
+      <div class="box-body">
+        <table id="example1" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+          @foreach($register as $register)
+            <tr>
+              <td>{{$register->name}}</td>
+              <td>{{$register->surname}}</td>
+              <td>{{$register-> phone}}</td>
+              <td>{{$register->email}}</td>
+              @if($register->status == 0)
+              <td><span class="label label-warning">Pending</span></td>
+              @else
+              <td><span class="label label-success">Completed</span></td>
+              @endif
+            </tr>
+          @endforeach
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Status</th>
+            </tr>
+          </tfoot>
         </table>
       </div>
       <!-- /.box-body -->
     </div>
     <!-- /.box -->
-  </div>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+ 
 
 
   <div class="col-md-4">
@@ -168,7 +144,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Last Month Registration'
+                text: 'Total Registration'
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -188,15 +164,27 @@
                 colorByPoint: true,
                 data: [{
                     name: 'Completed',
-                    y: 56.33
+                    y: {{$complete_count}}
                 }, {
                     name: 'Pending',
-                    y: 24.03,
+                    y: {{$pending_count}},
                     sliced: true,
                     selected: true
                 }]
             }]
         });
+
+
+  //dashboard datatable
+  $("#example1").DataTable();
+  $('#example2').DataTable({
+    "paging": true,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false
+  });
    
 
 

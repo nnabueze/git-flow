@@ -111,7 +111,7 @@
 		@if(Session::has('message'))
 			@include("include.message")
 		@else
-		<form role="form" class="" method="POST" action="/register">
+		<form role="form" class="" method="POST" action="/register/store">
 			{!! csrf_field() !!} 
 		    <div class="row setup-content" id="ProfileSetup-step">
 		        <div class="col-xs-12">
@@ -202,7 +202,7 @@
 		                          <div class="form-group animate-box">
 		                            <label class="col-sm-3 control-label" for="card-number">Office Email</label>
 		                            <div class="col-sm-9">
-		                             <input  maxlength="100" type="text" name="office_email" class="form-control" placeholder="Office Email"  />
+		                             <input  maxlength="100" type="text" name="email" class="form-control" placeholder="Office Email"  />
 		                            </div>
 		                          </div>
 		                        </fieldset>

@@ -8,8 +8,7 @@ use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
-    use Notifiable;
-    use EntrustUserTrait;
+    use Notifiable, EntrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -17,8 +16,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','phone'
     ];
+
+
 
     /**
      * The attributes that should be hidden for arrays.
@@ -29,23 +30,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function roles()
+    //capitalizing the Name attribute
+    public function setNameAttribute($value)
     {
-
-    }
-
-    public function hasRole($name)
-    {
-
-    }
-
-    public function can($permission)
-    {
-
-    }
-
-    public function ability($roles, $permissions, $options)
-    {
-        
+        $this->attributes['name'] = ucwords($value);
     }
 }

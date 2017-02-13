@@ -27,8 +27,8 @@
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
     
-          <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-
+          <li class="active"><a href="/admin/dashboard"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+      @if(Auth::user()->hasRole('Admin') || Auth::user()->hasRole('Superadmin'))
       <li class="treeview">
         <a href="#">
           <i class="fa fa-pie-chart"></i>
@@ -38,10 +38,14 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> User</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Role</a></li>
+          <li><a href="{{ url('/user/create') }}"><i class="fa fa-circle-o"></i> User</a></li>
+          <li><a href="/role/create"><i class="fa fa-circle-o"></i> Role</a></li>
+          <li><a href="/permission/create"><i class="fa fa-circle-o"></i> Permission</a></li>
         </ul>
       </li>
+      @endif
+
+
       <li class="treeview ">
         <a href="#">
           <i class="fa fa-laptop"></i>
@@ -63,7 +67,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Print ID</a></li>
+          <li><a href="/admin/print_id"><i class="fa fa-circle-o"></i> Print ID</a></li>
         </ul>
       </li>
       <li class="treeview">
@@ -74,7 +78,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> Edit Profile</a></li>
+          <li><a href="/user/edit"><i class="fa fa-circle-o"></i> Edit Profile</a></li>
         </ul>
       </li>
       <li>
@@ -82,8 +86,18 @@
           <i class="fa fa-envelope"></i> <span>Notification</span>
         </a>
       </li>
+      <li>
+          <a href="{{ url('/logout') }}"
+              onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+            <i class="fa fa-book"></i> <span>
+              Logout
+          </a>
 
-      <li><a href="#"><i class="fa fa-book"></i> <span>Logout</span></a></li>
+          <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+          </form>
+      </li>
 
     </ul>
   </section>

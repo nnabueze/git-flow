@@ -34,7 +34,7 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
-	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+
 	
 	<!-- Animate.css -->
 	<link href="{{ asset('front_template/css/animate.css')}}" rel="stylesheet">
@@ -102,7 +102,7 @@
 								</ul>
 							</li>
 							<li><a href="#">Contact</a></li>
-							<li class="btn-cta"><a href="/register"><span>Register</span></a></li>
+							<li class="btn-cta"><a href="/register/pending"><span>Register</span></a></li>
 							<li class="btn-cta"><a href="/register/client"><span>Already Registered</span></a></li>
 						</ul>
 					</div>

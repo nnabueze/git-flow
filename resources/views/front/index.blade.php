@@ -8,7 +8,7 @@
 			<div class="col-md-8 col-md-offset-2 text-center">
 				<div class="display-t">
 					<div class="display-tc animate-box" data-animate-effect="fadeIn">
-						<h1>The Art of Teaching is the Art of Assisting Discovery</h1>
+						<h1>The Nigerian Union of Journalists (NUJ),..</h1>
 						<p><a class="btn btn-primary btn-lg btn-learn" href="/register/create"><i class="icon-play"></i>Register</a> <a class="btn btn-primary btn-lg btn-video" href="/register/client"><i class="icon-play"></i> Already Registered</a></p>
 					</div>
 				</div>
@@ -17,28 +17,7 @@
 	</div>
 </header>
 
-<div id="fh5co-counter" class="fh5co-counters">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 text-center animate-box">
-				<span class="fh5co-counter js-counter" data-from="0" data-to="40356" data-speed="5000" data-refresh-interval="50"></span>
-				<span class="fh5co-counter-label">Students</span>
-			</div>
-			<div class="col-md-3 text-center animate-box">
-				<span class="fh5co-counter js-counter" data-from="0" data-to="30290" data-speed="5000" data-refresh-interval="50"></span>
-				<span class="fh5co-counter-label">Courses</span>
-			</div>
-			<div class="col-md-3 text-center animate-box">
-				<span class="fh5co-counter js-counter" data-from="0" data-to="2039" data-speed="5000" data-refresh-interval="50"></span>
-				<span class="fh5co-counter-label">Instructor</span>
-			</div>
-			<div class="col-md-3 text-center animate-box">
-				<span class="fh5co-counter js-counter" data-from="0" data-to="997585" data-speed="5000" data-refresh-interval="50"></span>
-				<span class="fh5co-counter-label">Earnings</span>
-			</div>
-		</div>
-	</div>
-</div>
+
 
 <!-- <div id="fh5co-explore" class="fh5co-bg-section">
 	<div class="container">
@@ -102,12 +81,12 @@
 	<div class="container">
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-				<h2>Showcase of A Finish Projects</h2>
-				<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				<h2>HISTORICAL BACKGROUND</h2>
+				<p>The Nigerian Union of Journalists (NUJ), was founded on March 15th 1955 in Lagos, the then Capital City of the Federal Republic of Nigeria. The union had some early nationalists with the fire of patriotism and nationalism burning in them and their writings included the first Governor General of Nigeria, the late Owelle of Onitsha, the Rt Hon (Dr.) Nnamdi Azikiwe, </p>
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid proj-bottom">
+<!-- 	<div class="container-fluid proj-bottom">
 		<div class="row">
 			<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
 				<a href="#"><img src="{{asset('front_template/images/project-1.jpg')}}" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
@@ -146,25 +125,25 @@
 				</a>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="container">
 		<div class="row">
 			<div class="features">
 				<div class="col-md-4 animate-box">
-					<h4>We have coolest features of this course</h4>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.  </p>
+					<!-- <h4>We have coolest features of this course</h4> -->
+					<p>the first Premier of the defunct Western Region, the late Chief Obafemi Awolowo, the late Sardauna of Sokoto, Sir Ahmadu Bello and Alhaji Tafawa Balewa; the late Herbert Macaulay and Chief H. O. Davies who, with the launch of the Yoruba vernacular newspaper “Iwe Irohin ni Ede Yoruba”, founded by the late Rev. Ajayi Crowther in Abeokuta,   </p>
 				</div>
 				<div class="col-md-4 animate-box">
-					<h4>Great teachers that we have</h4>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.  </p>
+					<!-- <h4>Great teachers that we have</h4> -->
+					<p>in 1929, wrote powerfully, in their newspapers, columns on the need for Nigeria's self-rule. The NUJ's birth was linked to the struggle for the independence of Nigeria. The struggle, it would be recalled gave birth to many protest groups, all yearning for the country's independence from the British. The groups came in various shades. Some were political in nature, like the Nigerian Youth Movement,  </p>
 				</div>
 				<div class="col-md-4 animate-box">
-					<h4>Steps by steps turorial session</h4>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.  </p>
+					<!-- <h4>Steps by steps turorial session</h4> -->
+					<p>a platform for the nationalists. Others were trade unions and professional groups. It was established by some early Nationalists for an independent Nigeria via the power of the pen. However, between 1961-1969,the union failed to operate as a trade union and this lead to the union's name being removed from the list of the registered trade </p>
 				</div>
 			</div>
 			<div class="col-md-12 text-center animate-box">
-				<p><a class="btn btn-primary btn-lg btn-learn" href="#">Create A Free Course</a></p>
+				<p><a class="btn btn-primary btn-lg btn-learn" href="#">Register</a></p>
 			</div>
 		</div>
 	</div>
@@ -174,12 +153,12 @@
 	<div class="container">
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-				<h2>Start A Course</h2>
-				<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				<h2>ETHICS FOR NIGERIAN JOURNALISTS</h2>
+				<p>Journalism entails a high degree of public trust. To earn and maintain this trust, it is morally imperative for every journalist and every news medium to observe the highest professional and ethical standards. </p>
 			</div>
 		</div>
 
-		<div class="row bs-wizard animate-box" style="border-bottom:0;">
+<!-- 		<div class="row bs-wizard animate-box" style="border-bottom:0;">
                
 			<div class="col-xs-3 bs-wizard-step complete">
 				<div class="text-center bs-wizard-stepnum"><h4>Step 1</h4></div>
@@ -188,32 +167,32 @@
 				<div class="bs-wizard-info text-center"><p>Create A Free Course</p></div>
 			</div>
 
-			<div class="col-xs-3 bs-wizard-step active"><!-- complete -->
+			<div class="col-xs-3 bs-wizard-step active">
 				<div class="text-center bs-wizard-stepnum"><h4>Step 2</h4></div>
 				<div class="progress"><div class="progress-bar"></div></div>
 				<a href="#" class="bs-wizard-dot"></a>
 				<div class="bs-wizard-info text-center"><p>Upload Content</p></div>
 			</div>
 
-			<div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
+			<div class="col-xs-3 bs-wizard-step disabled">
 				<div class="text-center bs-wizard-stepnum"><h4>Step 3</h4></div>
 				<div class="progress"><div class="progress-bar"></div></div>
 				<a href="#" class="bs-wizard-dot"></a>
 				<div class="bs-wizard-info text-center"><p>Make Your Course Beautiful</p></div>
 			</div>
 
-			<div class="col-xs-3 bs-wizard-step disabled"><!-- active -->
+			<div class="col-xs-3 bs-wizard-step disabled">
 				<div class="text-center bs-wizard-stepnum"><h4>Step 4</h4></div>
 				<div class="progress"><div class="progress-bar"></div></div>
 				<a href="#" class="bs-wizard-dot"></a>
 				<div class="bs-wizard-info text-center"><p>Start Making Money</p></div>
 			</div>
-		</div>
+		</div> -->
 
 	</div>
 </div>
 
-<div id="fh5co-testimonial" class="fh5co-bg-section">
+<!-- <div id="fh5co-testimonial" class="fh5co-bg-section">
 	<div class="container">
 		<div class="row animate-box">
 			<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
@@ -262,14 +241,14 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <div id="fh5co-blog">
 	<div class="container">
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-				<h2>Recent Post</h2>
-				<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				<h2>MISSION AND VISION STATEMENT</h2>
+				<p>Journalism entails a high degree of public trust. To earn and maintain this trust, it is morally imperative for every journalist and every news medium to observe the highest professional and ethical standards. In the exercise of these duties, a </p>
 			</div>
 		</div>
 		<div class="row">
